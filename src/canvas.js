@@ -132,6 +132,8 @@ function drawTrailBases(drawParams = {}, spectrumSections = {}){
 
 		let verticalScale = 0.1;
 
+//console.log(innerRadius + " " + outerRadius);
+
 		let gradient = ctx.createRadialGradient(x, y * (1 / verticalScale), innerRadius,
 												x, y * (1 / verticalScale), outerRadius);
 

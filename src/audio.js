@@ -10,7 +10,7 @@ let microphoneActive;
 
 const SOUND_PARAMS = {
 	gain					: 0.5,
-	analyzerSamples			: 8192,
+	analyzerSamples			: 8192 * 2,
 	sampleRate				: 48000,
 	frequency				: 0,
 	maxDistortion			: 100,

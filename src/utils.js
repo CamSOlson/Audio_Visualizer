@@ -58,8 +58,11 @@ function getSampleValue(frequency, maxFrequency, maxSamples){
 
 function calcSectionValues(audioData, soundParams = {}, spectrumSections = {}){
 	let previousSamples = 0;
+	//Iterate over each spectrum section
 	for (let section of Object.values( spectrumSections)){
+		//Update previous value
 		section.prevValue = section.value;
+		//Get the number of samples in this section
 		let samples = getSampleValue(section.frequency, soundParams.sampleRate, soundParams.analyzerSamples / 2);
 		for (let i = previousSamples; i < samples; i++){
 			section.value += audioData[i];

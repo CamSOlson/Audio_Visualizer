@@ -41,7 +41,7 @@ function init(){
 	audio.init(DEFAULTS.sound1);
 	audio.SOUND_PARAMS.sampleRate = audio.audioCtx.sampleRate;
 	//Update brilliance frequency stop to be the maximum frequency
-	audio.SPECTRUM_SECTIONS.brilliance.frequemcy = audio.SOUND_PARAMS.sampleRate;
+	audio.SPECTRUM_SECTIONS.brilliance.frequency = audio.SOUND_PARAMS.sampleRate;
 	
 	let canvasElement = document.querySelector("canvas#main"); // hookup <canvas> element
 	setupUI(canvasElement);
@@ -93,9 +93,6 @@ function loop(){
 
 	utils.calcSectionValues(audio.getFrequencyData(), audio.SOUND_PARAMS, audio.SPECTRUM_SECTIONS);
 
-	//console.log(audio.audioCtx.currentTime);
-
-	//console.log(sectionValues);
 	canvas.draw(DRAW_PARAMS, audio.SPECTRUM_SECTIONS, audio.getWaveformData());
 		
 	controls.update();
