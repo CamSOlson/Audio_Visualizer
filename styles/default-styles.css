@@ -188,6 +188,16 @@ section#menu[data-hidden="true"]{
 	opacity: 0;
 	visibility: hidden;
 }
+section#credits{
+	position: fixed;
+	bottom: 1rem;
+}
+a{
+	color: lightgray;
+}
+a:visited{
+	color: lightgray;
+}
 
 #equalizer{
 	position: fixed;
